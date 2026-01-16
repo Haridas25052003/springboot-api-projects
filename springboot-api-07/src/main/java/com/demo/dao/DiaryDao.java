@@ -8,5 +8,12 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface DiaryDao extends JpaRepository<Diary,Integer>{
 	
 	List<Diary> findAll();
+	
+	List<Diary> getDiaryById(int id);
 
+	List<Diary> getDiaryByCategory(String category);
+
+	List<Diary> getDiaryByRemark(String remark);
+
+	public void deleteById(int id);
 }

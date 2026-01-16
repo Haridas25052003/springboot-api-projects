@@ -18,4 +18,27 @@ public class DiaryServiceImpl implements DiaryService{
 	public List<Diary> findAll() {
 		return dd.findAll();
 	}
+
+	@Override
+	public List<Diary> getDiaryById(int id) {
+		
+		return dd.getDiaryById(id);
+	}
+
+	@Override
+	public List<Diary> getDiaryByCategory(String category) {
+		
+		return dd.getDiaryByCategory(category);
+	}
+
+	@Override
+	public List<Diary> getDiaryByRemark(String remark) {
+		
+		return dd.getDiaryByRemark(remark);
+	}
+
+	@Override
+	public void deleteById(int id) {
+		dd.deleteById(id);
+	}
 }
