@@ -6,5 +6,5 @@ import com.demo.model.Product;
 
 public interface ProductService {
 
-	
+	Product addProduct(Product product,int categoryId);
 }

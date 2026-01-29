@@ -19,6 +19,12 @@ public class ProductServiceImpl implements ProductService{
 	
 	@Autowired
 	private CategoryDao cd;
+
+	@Override
+	public Product addProduct(Product product, int categoryId) {
+		
+		return pd.save(product);
+	}
 	
 	
 }

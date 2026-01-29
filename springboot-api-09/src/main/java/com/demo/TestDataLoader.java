@@ -16,7 +16,7 @@ public class TestDataLoader implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Category c1=new Category();
+/*		Category c1=new Category();
 		c1.setCategoryname("hardware");
 		
 		Category c2=new Category();
@@ -30,7 +30,7 @@ public class TestDataLoader implements CommandLineRunner{
 		cs.addCategory(c3);
 		
 		System.out.println("categories inserted");
-		
+	*/	
 	}
 
 }

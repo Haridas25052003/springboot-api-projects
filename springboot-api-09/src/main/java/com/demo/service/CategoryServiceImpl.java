@@ -1,5 +1,7 @@
 package com.demo.service;
 
+import java.util.List;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -16,6 +18,24 @@ public class CategoryServiceImpl implements CategoryService{
 	public Category addCategory(Category category) {
 		
 		return cd.save(category);
+	}
+
+	@Override
+	public List<Category> findAll() {
+		
+		return cd.findAll();
+	}
+
+	@Override
+	public Category updateCategory(int id, Category category) {
+		
+		return cd.save(category);
+	}
+
+	@Override
+	public void deleteCategory(int id) {
+		cd.deleteById(id);
+		
 	}
 
 }
