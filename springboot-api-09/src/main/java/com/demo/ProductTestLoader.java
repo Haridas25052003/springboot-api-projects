@@ -16,13 +16,13 @@ public class ProductTestLoader implements CommandLineRunner{
 	@Override
 	public void run(String... args) throws Exception {
 		
-		Product p=new Product();
-		p.setProductname("mobile");
-		p.setProductprice(25000);
-		
-		ps.addProduct(p, 1);
-		System.out.println("product added successfully");
-		
+//		Product p=new Product();
+//		p.setProductname("mobile");
+//		p.setProductprice(25000);
+//		
+//		ps.addProduct(p, 1);
+//		System.out.println("product added successfully");
+//		
 	}
 
 }

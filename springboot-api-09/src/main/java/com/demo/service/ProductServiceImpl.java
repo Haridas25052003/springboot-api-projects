@@ -23,8 +23,33 @@ public class ProductServiceImpl implements ProductService{
 	@Override
 	public Product addProduct(Product product, int categoryId) {
 		
+		Category category=cd.getById(categoryId);
+				//.orElseThrow(()->new RuntimeException("category not found"));
+		
+		product.setCategory(category);
 		return pd.save(product);
 	}
-	
-	
+
+	@Override
+	public List<Product> getAllProducts() {
+		
+		return pd.findAll();
+	}
+
+	@Override
+	public Product updateProduct(int productId, Product product) {
+		
+		Product existing=pd.getById(productId);
+				//.orElseThrow(()->new RuntimeException("product not found"));
+		
+		existing.setProductname(product.getProductname());
+		existing.setProductprice(product.getProductprice());
+		return pd.save(existing);
+	}
+
+	@Override
+	public void deleteProduct(int productId) {
+		
+		pd.deleteById(productId);
+	}	
 }
